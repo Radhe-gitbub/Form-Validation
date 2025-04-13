@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered</title>
+</head>
+<body>
+    <h1 id="thankMsg">Thank you for your Registration!</h1>
+
+    <script>
+        // Get full name from the URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const fullName = urlParams.get('fullName');
+      
+        // Show personalized message
+        if (fullName) {
+          document.getElementById('thankMsg').textContent = `Thank you, ${fullName} - for your Registration!`;
+        }
+      </script>
+
+</body>
+</html>

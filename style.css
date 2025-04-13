@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myfont: 'Mulish', sans-serif;
+    --my-btn-font: 'Montserrat', sans-serif;
+    --lg-lightcolor: linear-gradient(to left, #ad8b8b, #b8d18a);
+    --lg-color: linear-gradient(to left, #3f4568, #3b7a83);
+}
+
+body {
+    background-image: var(--lg-lightcolor);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--myfont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(55, 59, 57, 0.8);
+    overflow: hidden;
+    max-width: 100%;
+    width: calc(100vw - 70vw);
+}
+
+.container h2 {
+    background: var(--lg-color);
+    padding: 8px;
+    color: #0f0f0f;
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    padding: 20px;
+}
+
+.form-control {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+.form-control input {
+    width: 100%;
+    border: 2px solid #e6e4e4;
+    border-radius: 5px;
+    display: block;
+    padding: 7px;
+    font-size: 15px;
+    font-family: var(--myfont);
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #20a055;
+}
+
+.form-control.error input {
+    border-color: #b42323;
+}
+
+.form-control i {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-circle-check {
+    color: #20a055;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #dd2626;
+    visibility: visible;
+}
+
+.form-control small  {
+    color: #dd2626;
+    position: absolute;
+    bottom: -16px;
+    left: 5px;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form .submit-btn {
+    background: var(--lg-color);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 7px;
+    display: block;
+    font-family: var(--my-btn-font);
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: 550;
+    transition: all ease;
+    /* margin-left: 180px; */
+}
+
+.form footer {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 15px;
+    margin-bottom: -7px;
+    color: rgb(90, 87, 87);
+}
+
+.form .submit-btn:hover {
+    background: linear-gradient(to right, #084f5a, #0c1d68);
+}
+
+@media (max-width: 998px) {
+    .container{
+        width: calc(100vw - 35vw);
+    }
+}
